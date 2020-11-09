@@ -5,9 +5,9 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="RestSharp" Version="106.6.9" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Square" Version="5.1.0" />
+    <PackageReference Include="Square" Version="6.5.0" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Pages\About.cshtml" />
