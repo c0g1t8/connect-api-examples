@@ -18,19 +18,22 @@ There are two sections in this ReadMe.
 To get it running:
 
 * Clone/download to your local computer.
-* Place your production credentials in `appsettings.Production.json`
-  * **WARNING**: never upload .env with your credential/access_token
-* Place your sandbox credentials in `appsettings.Sandbox.json`
-  * **WARNING**: never upload .env with your credential/access_token
+* To prevent credentials from being stored in source control, use [dotnet user-secrets](https://docs.microsoft.com/aspnet/core/security/app-secrets) to store _sandbox_ credentials.
+
+  ```bash
+  dotnet user-secrets set "AppSettings:AccessToken" $AccessToken
+  dotnet user-secrets set "AppSettings:LocationId" $LocationId
+  ```
+
 * Run the following command in your terminal, while inside the "csharp_checkout" (this) directory to start your server:
 
-``` bash
-dotnet run --launch-profile Sandbox
-```
+  ``` bash
+  dotnet run
+  ```
 
-* Note: replace "Sandbox" with "Production" to use your production credentials.
-
-This will start the server on `localhost:5000`, which you can navigate to in your favorite browser.
+  This will start the server on `localhost:5000`, which you can navigate to in your favorite browser.
+  
+**Note**: To use production credentials also override the *AppSettings:Environment* with *production*.
 
 ## Application flow
 
