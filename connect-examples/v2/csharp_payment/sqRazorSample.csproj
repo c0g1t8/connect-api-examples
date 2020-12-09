@@ -7,7 +7,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
-    <PackageReference Include="Square" Version="6.5.0" />
+    <PackageReference Include="Square" Version="7.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Pages\Checkout.cshtml.cs">
