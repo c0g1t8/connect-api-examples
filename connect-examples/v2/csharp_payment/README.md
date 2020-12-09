@@ -28,8 +28,11 @@ After cloning this sample project to local, open command line tool, and from the
 
 ### Provide required credentials
 
-Open `./appsettings.json`, specify "Environment" and replace "AccessToken", "LocationId" and "ApplicationId" with the ids you get from your square application created in [Square Developer Portal](https://connect.squareup.com/apps).
-**WARNING**: never upload `appsettings.json` with your credentials/access_token.
+To prevent credentials from being stored in source control, use [dotnet user-secrets](https://docs.microsoft.com/aspnet/core/security/app-secrets) to store _sandbox_ credentials from your square application created in [Square Developer Portal](https://connect.squareup.com/apps).
+
+    dotnet user-secrets set "AppSettings:ApplicationId" $ApplicationId
+    dotnet user-secrets set "AppSettings:AccessToken" $AccessToken
+    dotnet user-secrets set "AppSettings:LocationId" $LocationId
 
 If you're just testing things out, it's recommended that you use your _sandbox_
 credentials for now. See
